@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+  position: absolute;
+  width: 100%;
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  user-select: none;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+  #text1,
+  #text2 {
+    font-size: 2em;
+
+    font-family: "Raleway", sans-serif;
+  }
+
+  ;
+}
+
+.light-theme {
+  --text-color: #333;
+}
+
+.dark-theme {
+  --text-color: #ddd;
+}
+
+#text1,
+#text2 {
+  color: var(--text-color);
+}
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
